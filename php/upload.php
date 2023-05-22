@@ -1,9 +1,9 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $host = "localhost";
-    $user = "paris";
+    $user = "root";
     $password = "Rivotril_362778";
-    $dbname = "paris";
+    $dbname = "paris_jeu";
 
     $conn = mysqli_connect($host, $user, $password, $dbname);
 
@@ -32,7 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $cheminImage)) {
             echo "L'image a été enregistrée avec succès.";
-            sleep(3); // Décompte de 3 secondes
 
             header("Location: ./redirect.php"); // Redirection vers la page "redirect.php"
             exit();

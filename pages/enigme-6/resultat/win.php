@@ -25,6 +25,9 @@
 			<?php
 			$url = $_SERVER['REQUEST_URI'];
 
+			// session_start();
+			// $_SESSION['e_6'] = true;
+
 			if ($url == '/pages/enigme-6/resultat/win.php?error=25') {
 				echo ("Une erreur s'est produite lors de l'enregistrement de l'image.");
 			}

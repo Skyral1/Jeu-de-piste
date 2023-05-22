@@ -19,9 +19,9 @@
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Connexion à la base de données
                 $host = "localhost";
-                $user = "paris";
+                $user = "root";
                 $password = "Rivotril_362778";
-                $dbname = "paris";
+                $dbname = "paris_jeu";
 
                 $conn = mysqli_connect($host, $user, $password, $dbname);
 
@@ -61,6 +61,7 @@
                     $row = $result->fetch_assoc();
                     session_start();
                     $_SESSION['user_id'] = $row['id'];
+                    // setcookie('session_id', serialize($row['id']), time() + 7200);
                 } else {
                     echo "User not found";
                 }

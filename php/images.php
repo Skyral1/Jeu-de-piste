@@ -36,9 +36,9 @@ if (!isset($_SESSION['username'])) {
             <select name="choixImage">
                 <?php
                 $host = "localhost";
-                $user = "paris";
+                $user = "root";
                 $password = "Rivotril_362778";
-                $dbname = "paris";
+                $dbname = "paris_jeu";
 
                 $conn = mysqli_connect($host, $user, $password, $dbname);
 

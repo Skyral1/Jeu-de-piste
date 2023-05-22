@@ -18,9 +18,9 @@
 		session_start();
 		// Connexion à la base de données
 		$servername = "localhost";
-		$username = "paris";
+		$username = "root";
 		$password = "Rivotril_362778";
-		$dbname = "paris";
+		$dbname = "paris_jeu";
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		// Vérifie si la connexion est réussie
 		if ($conn->connect_error) {
