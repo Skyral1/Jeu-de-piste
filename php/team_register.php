@@ -19,9 +19,9 @@
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Connexion à la base de données
                 $host = "localhost";
-                $user = "root";
+                $user = "paris";
                 $password = "Rivotril_362778";
-                $dbname = "paris_jeu";
+                $dbname = "paris";
 
                 $conn = mysqli_connect($host, $user, $password, $dbname);
 

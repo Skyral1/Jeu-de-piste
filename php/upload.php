@@ -1,9 +1,9 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $host = "localhost";
-    $user = "root";
+    $user = "paris";
     $password = "Rivotril_362778";
-    $dbname = "paris_jeu";
+    $dbname = "paris";
 
     $conn = mysqli_connect($host, $user, $password, $dbname);
 
