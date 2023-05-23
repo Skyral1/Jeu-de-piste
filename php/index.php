@@ -37,6 +37,7 @@ if (!isset($_SESSION['username'])) {
         $username = $_SESSION['username'];
         if ($username === "Skyral") {
             echo "<a class=\"btn_a\" href=\"./info.php\">Info serveur</a>";
+            echo "<a class=\"btn_a\" href=\"./avis.php\">Avis joueurs</a>";
         }
         ?>
         <a class="btn_a" href="./teams.php">Liste des équipes</a>
