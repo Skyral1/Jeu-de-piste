@@ -5,7 +5,7 @@ $destinations = array(
     "../pages/enigme-2/",
     "../pages/enigme-3/",
     "../pages/enigme-4/",
-    "../pages/enigme-5/",
+    "../pages/enigme-5/"
 );
 
 // Vérification des pages déjà visitées
@@ -31,15 +31,12 @@ if (count($remainingDestinations) > 0) {
     header("Location: " . $randomDestination);
     exit();
 } else {
-    // Vérification de la dernière page visitée
-    $lastVisitedPage = end($visitedPages);
-    if ($lastVisitedPage === "../pages/enigme-6/resultat/win.php") {
-        // Redirection spécifique lorsque la dernière page visitée est "../pages/enigme-6/resultat/win.php"
-        header("Location: ../pages/end/");
-    } else {
-        // Redirection vers une page spécifique lorsque toutes les destinations ont été visitées
-        header("Location: ../pages/enigme-6/");
+    // Redirection vers une page spécifique lorsque toutes les destinations ont été visitées
+    $finalDestination = "../pages/enigme-6/";
+    // Vérification si la page spécifique est déjà dans les pages visitées
+    if (!in_array($finalDestination, $visitedPages)) {
+        header("Location: " . $finalDestination);
+        exit();
     }
-    exit();
 }
 ?>

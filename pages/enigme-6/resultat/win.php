@@ -21,7 +21,7 @@
 			href="https://www.google.com/maps/dir//Le+Centre+Pompidou+Place+Georges-Pompidou+75004+Paris+France/@48.860642,2.352245,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x47e66e1c09b820a3:0xb7ac6c7e59dc3345"
 			target="_blank" rel="noopener noreferrer">Ouvrir la carte</a>
 
-		<form action="../../../php/upload.php" method="POST" enctype="multipart/form-data">
+		<form action="../../../php/6_upload.php" method="POST" enctype="multipart/form-data">
 			<?php
 			$url = $_SERVER['REQUEST_URI'];
 

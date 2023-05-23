@@ -36,18 +36,25 @@
 
 		<h1>Bien joué !</h1>
 
-		<h3>Vous avez fini mon jeu de piste dans le temps imparti!</h3>
+		<h3>Vous avez fini mon jeu!</h3>
 
-		<p>
-			Durant tout le jeu, vous avez récupéré des pièces de puzzle.
-			Assemblez-les et résolvez l'énigme finale.
-			<br />
-			<br />
-			Vous avez <b>6 minutes</b> pour trouvez le/la personalité. <br />
-			Revenez avec la bonne réponse au près des professeurs, une surprise vous
-			y attendra!
-		</p>
-		<h4>Bonne chance!</h4>
+		<p>Donnez votre avis sur le jeu :</p>
+		<form action="../../php/avis_register.php" method="POST">
+			<label for="avis">Votre avis :</label>
+			<textarea name="avis" id="avis" required></textarea>
+
+			<label for="note">Note :</label>
+			<select name="note" id="note" required>
+				<option value="1">1 étoile</option>
+				<option value="2">2 étoiles</option>
+				<option value="3">3 étoiles</option>
+				<option value="4">4 étoiles</option>
+				<option value="5">5 étoiles</option>
+			</select>
+
+			<div class="btn"><button type="submit">Enregistrer</button></div>
+		</form>
+
 	</main>
 	<footer>
 		<p class="copyright">&copy;Thibault Soquette - Tous droits réservés</p>
