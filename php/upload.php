@@ -28,7 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             mkdir($cheminDossier, 0777, true);
         }
 
-        $cheminImage = $cheminDossier . "/" . $_FILES["image"]["name"];
+        $extension = pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION);
+        $nouveauNom = uniqid() . '.' . $extension;
+        $cheminImage = $cheminDossier . "/" . $nouveauNom;
 
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $cheminImage)) {
             echo "L'image a été enregistrée avec succès.";
@@ -36,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: ./redirect.php"); // Redirection vers la page "redirect.php"
             exit();
         } else {
-            header("Location:" .$_SERVER['HTTP_REFERER'] . "?error=25"); // Redirection vers la page "redirect.php"
+            header("Location:" . $_SERVER['HTTP_REFERER'] . "?error=25"); // Redirection vers la page "redirect.php"
             exit();
         }
     } else {
